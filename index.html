@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad It</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo"> <!-- Small logo on the upper left corner -->
+        <h1 class="title">Advertise It!</h1>
+        <div class="header">
+            <input type="text" id="playerName" placeholder="ENTER YOUR NAME" class="name-input">
+            <div class="timer-container">
+                <span id="timer" class="timer">Timer: 120</span>
+                <button id="startButton" class="start-button" onclick="startTimer()">START</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left-panel">
+                <h2>SLOGANS</h2>
+                <div class="slogan-buttons">
+                    <button class="slogan-btn" onclick="selectSlogan('Slogan 1')">Slogan 1</button>
+                    <button class="slogan-btn" onclick="selectSlogan('Slogan 2')">Slogan 2</button>
+                    <button class="slogan-btn" onclick="selectSlogan('Slogan 3')">Slogan 3</button>
+                    <button class="slogan-btn" onclick="selectSlogan('Slogan 4')">Slogan 4</button>
+                </div>
+                <h2>PRODUCT IMAGES</h2>
+                <div class="image-gallery">
+                    <img src="image1.jpg" alt="Product 1" class="product-image" onclick="selectImage('image1.jpg')">
+                    <img src="image2.jpg" alt="Product 2" class="product-image" onclick="selectImage('image2.jpg')">
+                    <img src="image3.jpg" alt="Product 3" class="product-image" onclick="selectImage('image3.jpg')">
+                </div>
+                <h2>PRODUCT DESCRIPTION</h2>
+                <input type="text" id="productDescription" placeholder="ENTER PRODUCT DESCRIPTION" class="description-input">
+                <button class="submit-button" onclick="submitAd()">SUBMIT</button>
+            </div>
+            <div class="right-panel">
+              <h2>ADVERTISEMENT</h2>
+                <div id="workspace" class="workspace">
+                 <div class="ad-content">
+                 <div id="adSlogan" class="ad-slogan"></div>
+                <img id="adImage" class="ad-image" alt="Selected Product" />
+               <div id="adDescription" class="ad-description"></div>
+             </div>
+           </div>
+         </div>
+
+
+    <!-- Result Popup -->
+    <div id="resultPopup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <p id="resultMessage"></p>
+        </div>
+    </div>
+
+    <audio id="backgroundAudio" src="background.mp3" loop></audio>
+    <audio id="popupAudio" src="popup.mp3"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
